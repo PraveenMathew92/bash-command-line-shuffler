@@ -9,24 +9,23 @@ then
     exit 0
 fi
 
+number_of_lines_to_shuffle=lines_in_file
+
 for line in `seq $(($lines_in_file-1))`
 do
-    echo $line
-
-    number_of_lines_to_shuffle=$(($lines_in_file - $line + 1))
-    echo "lines to shuffle $number_of_lines_to_shuffle"
-
     random_number=$(($RANDOM%$number_of_lines_to_shuffle))
     line_to_be_shuffled=$(($random_number + $line))
-    echo "line to be shuffled $line_to_be_shuffled"
 
+    #save the element chosen in the shuffle
     line_text=`sed "${line_to_be_shuffled}q;d" $filename`
-    echo "text $line_text"
 
+    #delete the element to be shuffled form the file
     sed -i "" "${line_to_be_shuffled}d" $filename
+
+    #put the chosen element at the shuffled position
     sed -i.bak "${line}i\\
     ${line_text}\\
     " $filename
 
-    echo
+    (( number_of_lines_to_shuffle-- ))
 done
