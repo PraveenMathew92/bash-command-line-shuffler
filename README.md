@@ -19,7 +19,7 @@ Tokyo
 Berlin
 ```
 
-# Run the script without cloning on the input_file.txt. Execute the curl command in the terminal
+## Execute the curl command in the terminal to shuffle local input_file.txt
 `curl https://raw.githubusercontent.com/PraveenMathew92/bash-command-line-shuffler/master/shuffle.sh | bash -s input_file.txt`
 
 ### Language: bash
