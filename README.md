@@ -1,4 +1,7 @@
 # Bash-command-line-shuffler
+
+[![Latest](https://img.shields.io/github/release/PraveenMathew92/bash-command-line-shuffler/all.svg)]()
+
 Bash script to shuffle a list of elements passed in the input file
 
 Say we have an input file
