@@ -2,7 +2,7 @@
 
 [![Latest](https://img.shields.io/github/release/PraveenMathew92/bash-command-line-shuffler/all.svg)]()
 
-Bash script to shuffle a list of elements passed in the input file
+Bash script to shuffle a list of elements passed in the input file similar to the [shuf](https://linux.die.net/man/1/shuf) command in linux
 
 Say we have an input file
 
